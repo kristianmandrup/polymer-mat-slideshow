@@ -1,9 +1,9 @@
 mat-slideshow
 =============
 
-An element providing a starting point for your own reusable Polymer elements.
+Polymer material slideshow using [materialize](http://materializecss.com/media.html) media slideshow component under the hood.
 
-`bower install mat-slideshow`
+`bower install polymer-mat-slideshow`
 
 It can be used something like this:
 
