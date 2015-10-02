@@ -44,6 +44,14 @@ Then in `app/index.html` or some other place:
 <link rel="import" href="../bower_components/polymer/polymer.html">  
 <link rel="import" href="../bower_components/mat-slideshow/slides.html">
 <link rel="import" href="elements/my-slideshow/my-slideshow.html">
+
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- Import materialize.css -->
+ <link type="text/css" rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+ <!-- jQuery 2 dependency -->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Import materialize.js -->
+ <script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
 // ...
 <body>
   <my-slideshow slideshow="{{ slideshow }}"></my-slideshow>
