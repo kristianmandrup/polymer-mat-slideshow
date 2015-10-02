@@ -2,26 +2,28 @@
   "name": "mat-slideshow",
   "version": "1.0.1",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Kristian Mandrup <kmandrup@gmail.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "Polymer material slideshow using materialize media slideshow component",
   "keywords": [
     "web-component",
     "polymer",
-    "seed"
+    "slideshow",
+    "material",
+    "materialize"
   ],
   "main": "mat-slideshow.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/kristianmandrup/mat-slideshow/",
   "ignore": [
     "/.*",
     "/test/"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0"
+    "polymer": "Polymer/polymer#^1.0.0",
+    "materialize": "Dogfalo/materialize"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "web-component-tester": "*"
   }
 }
