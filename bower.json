@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
+    "iron-image": "PolymerElements/iron-image",
     "materialize": "Dogfalo/materialize"
   },
   "devDependencies": {

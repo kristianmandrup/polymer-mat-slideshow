@@ -4,11 +4,11 @@
       display: block;
     }
   </style>
-
+  <link rel="import" href="../bower_components/iron-image/iron-image.html">
   <template>
-    <mat-slides options="{{slideshow.options}}">
-      <template is="dom-repeat" items="{{slideshow.items}}" as="slide">
-        <mat-slide image="slide.image" caption="slide.caption"></mat-slide>
+    <mat-slides id="my-slideshow" options="{{options}}">
+      <template is="dom-repeat" items="{{items}}" as="slide">
+        <mat-slide active="{{slide.active}}" image="{{slide.image}}" caption="{{slide.caption}}"></mat-slide>
       </template>
     </mat-slides>
   </template>
@@ -20,7 +20,32 @@
     is: 'my-slideshow',
 
     properties: {
-      slideshow: Object
+      options: {
+        type: Object,
+        value: {}
+      },
+      items: {
+        type: Array,
+        notify: true,
+      }
+    },
+    ready: function() {
+      this.items = [{
+        image: 'http://lorempixel.com/350/200',
+        caption: {
+          alignment: 'left',
+          text: 'This is the end',
+          slogan: 'The end of the world is near!'
+        }
+      },
+      {
+        image: 'http://lorempixel.com/350/200',
+        caption: {
+          alignment: 'left',
+          text: 'This is only the beginning',
+          slogan: 'Dont give up, never surrender!'
+        }
+      }];
     }
   });
 </script>

@@ -1,15 +1,13 @@
-<link rel="import" href="../polymer/polymer.html">
 <dom-module id="mat-slide">
-
   <style>
     :host {
       display: block;
     }
   </style>
-
   <template>
-    <li>
-      <img src="{{image}}"> <!-- random image -->
+    <li class="{{active}}">
+      <!-- <iron-image src="{{image}}"></iron-image> -->
+      <img src="{{image}}"/>
       <template if="{{caption}}">
         <div class="caption {{caption.alignment}}-align">
           <h3>{{ caption.text }}</h3>
@@ -18,17 +16,16 @@
       </template>
     </li>
   </template>
+  <script>
+    Polymer({
+      is: 'mat-slide',
 
+      properties: {
+        active: Boolean,
+        caption: Object,
+        image: String
+      }
+    });
+
+  </script>
 </dom-module>
-
-<script>
-  Polymer({
-    is: 'mat-slide',
-
-    properties: {
-      caption: Object,
-      image: String
-    }
-  });
-
-</script>

@@ -5,7 +5,56 @@ Polymer material slideshow using [materialize](http://materializecss.com/media.h
 
 `bower install polymer-mat-slideshow`
 
-It can be used something like this:
+### Troubleshoot
+
+For some reason, currently having trouble with `this.each` in `materialize.js` not working as expected:
+
+See: http://stackoverflow.com/questions/3106414/in-jquery-how-does-the-this-each-work
+
+```js
+return this.each(function() {
+  // For each slider, we want to keep track of
+  // which slide is active and its associated content
+```
+
+No idea why, not a jQuery plugin expert!
+
+This element can be used something like this:
+
+### Global Configuration
+
+In `app/index.html`
+
+```html
+<head>
+  <link rel="import" href="bower_components/polymer/polymer.html">  
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import materialize.css -->
+  <link type="text/css" rel="stylesheet" href="../bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+  <!-- jQuery 2 dependency -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Import materialize.js -->
+  <script type="text/javascript" src="../bower_components/materialize/dist/js/materialize.min.js"></script>
+</head>
+<body>
+  <!-- use custom slideshow element -->
+  <my-slideshow id="my-slideshow" slideshow="{{ slideshow }}"></my-slideshow>
+```
+
+### Import elements
+
+In `app/elements/elements.html`
+
+```html
+<!-- element imports -->
+<link rel="import" href="../bower_components/mat-slideshow/mat-slideshow.html">
+<!-- app element imports -->
+<link rel="import" href="elements/my-slideshow/my-slideshow.html">
+```
+
+### Use slideshow in custom element
+
+Create custom element referenced by `index.html`
 
 `app/elements/my-slideshow/my-slideshow.html`
 
@@ -36,25 +85,6 @@ It can be used something like this:
     }
   });
 </script>
-```
-
-Then in `app/index.html` or some other place:
-
-```html
-<link rel="import" href="../bower_components/polymer/polymer.html">  
-<link rel="import" href="../bower_components/mat-slideshow/slides.html">
-<link rel="import" href="elements/my-slideshow/my-slideshow.html">
-
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <!-- Import materialize.css -->
- <link type="text/css" rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
- <!-- jQuery 2 dependency -->
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!-- Import materialize.js -->
- <script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
-// ...
-<body>
-  <my-slideshow slideshow="{{ slideshow }}"></my-slideshow>
 ```
 
 Dependencies
